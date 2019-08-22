@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-// GetEnv gets an environment variable from a string
+// GetEnv gets an environment variable from a string and returns an error if the env variable is not set
 func GetEnv(key string) (string, error) {
 	variable := os.Getenv(key)
 	if variable == "" {
